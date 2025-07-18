@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { EMBEDDED_VIDEOS, getVideosByCategory } from './MediaIntegration';
-import { Play, Clock, MapPin, Tag, Eye, Grid, Monitor, Smartphone } from 'lucide-react';
+import { Play, Clock, MapPin, Tag, Eye, Grid, Monitor } from 'lucide-react';
 
 export const VideoManager: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState<string>('all');

@@ -1,5 +1,4 @@
 // Media optimisation utilities for Custodian Economy platform
-import React from 'react';
 
 export const MEDIA_CONFIG = {
   breakpoints: {

@@ -1,7 +1,6 @@
-import React, { useRef, useState, Suspense } from 'react'
+import { useRef, useState, Suspense } from 'react'
 import { Canvas, useFrame } from '@react-three/fiber'
-import { OrbitControls, Text, Box, Sphere, Cylinder, Html } from '@react-three/drei'
-import { motion } from 'framer-motion'
+import { OrbitControls, Text, Sphere, Cylinder, Html } from '@react-three/drei'
 import * as THREE from 'three'
 
 interface HubData {
@@ -107,7 +106,6 @@ function AnimatedHub({ data, onClick, isActive }: { data: HubData, onClick: () =
 }
 
 function ConnectionLine({ from, to, active }: { from: [number, number, number], to: [number, number, number], active: boolean }) {
-  const points = [from, [(from[0] + to[0]) / 2, (from[1] + to[1]) / 2 + 1, (from[2] + to[2]) / 2], to]
   
   return (
     <group>
