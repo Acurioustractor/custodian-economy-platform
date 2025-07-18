@@ -20,9 +20,9 @@ export default defineConfig({
       output: {
         manualChunks: {
           vendor: ['react', 'react-dom'],
-          animation: ['framer-motion', 'react-spring'],
-          charts: ['d3'],
-          icons: ['lucide-react', '@heroicons/react'],
+          animation: ['framer-motion'],
+          three: ['three', '@react-three/fiber', '@react-three/drei'],
+          icons: ['lucide-react'],
         },
       },
     },
