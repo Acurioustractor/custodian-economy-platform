@@ -1,27 +1,27 @@
-// Local images - matched to your actual uploaded files
+// Local images - served from public directory in production
 export const MEDIA_ASSETS = {
   keiron: {
-    portrait: '/src/assets/images/community/keiron-portrait.jpg',
-    quote: '/src/assets/images/community/keiron-portrait.jpg', // Using same for now
+    portrait: '/images/community/keiron-portrait.jpg',
+    quote: '/images/community/keiron-portrait.jpg', // Using same for now
   },
   aden: {
-    portrait: '/src/assets/images/community/aden-portrait.jpg',
-    homeless: '/src/assets/images/community/aden-portrait.jpg', // Using same for now
-    working: '/src/assets/images/community/aden-working.jpg',
+    portrait: '/images/community/aden-portrait.jpg',
+    homeless: '/images/community/aden-portrait.jpg', // Using same for now
+    working: '/images/community/aden-working.jpg',
   },
   troy: {
-    portrait: '/src/assets/images/community/troy-portrait.jpg',
-    working: '/src/assets/images/community/troy-portrait.jpg', // Using same for now
+    portrait: '/images/community/troy-portrait.jpg',
+    working: '/images/community/troy-portrait.jpg', // Using same for now
   },
   community: {
-    group: '/src/assets/images/people/group-photo.jpg',
-    mentoring: '/src/assets/images/people/mentoring-session.jpg',
-    cultural: '/src/assets/images/people/mentoring-session.jpg', // Using same for now
+    group: '/images/people/group-photo.jpg',
+    mentoring: '/images/people/mentoring-session.jpg',
+    cultural: '/images/people/mentoring-session.jpg', // Using same for now
   },
   program: {
-    training: '/src/assets/images/program/training-session.jpg',
-    workshop: '/src/assets/images/program/workshop.jpg',
-    support: '/src/assets/images/program/workshop.jpg', // Using same for now
+    training: '/images/program/training-session.jpg',
+    workshop: '/images/program/workshop.jpg',
+    support: '/images/program/workshop.jpg', // Using same for now
   }
 };
 
