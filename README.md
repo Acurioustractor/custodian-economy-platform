@@ -21,7 +21,7 @@ The Custodian Economy Platform demonstrates a revolutionary approach to employme
 - **Location-based Content**: Contextual information for each story
 
 ### Professional Styling
-- **Earthy Color Palette**: Terracotta, sage, clay, and moss tones
+- **Earthy Colour Palette**: Terracotta, sage, clay, and moss tones
 - **Typography**: Inter font family for modern readability
 - **Animations**: Smooth transitions and micro-interactions
 - **Accessibility**: WCAG 2.1 compliant design
@@ -47,9 +47,9 @@ The Custodian Economy Platform demonstrates a revolutionary approach to employme
 - **ESLint** - Code linting and quality assurance
 - **Vitest** - Unit testing framework
 
-## 🎨 Color System
+## 🎨 Colour System
 
-The platform uses a carefully curated earthy color system:
+The platform uses a carefully curated earthy colour system:
 
 - **Terracotta** (`#ff6b35`) - Primary accent, energy and transformation
 - **Sage** (`#556b2f`) - Growth, stability, and community
@@ -130,9 +130,9 @@ Components should be added to `src/components/` with:
 - Unit tests for functionality
 - Responsive design considerations
 
-### Color Usage
+### Colour Usage
 
-Always use the predefined Tailwind color classes:
+Always use the predefined Tailwind colour classes:
 
 ```tsx
 // Good

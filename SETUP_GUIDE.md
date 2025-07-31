@@ -110,7 +110,7 @@ import { Interactive3DModel } from '@/components/Interactive3DModel'
 </div>
 ```
 
-### **Customize Colors & Data**
+### **Customise Colours & Data**
 ```tsx
 // In Interactive3DModel.tsx, modify hubData:
 const hubData = [
@@ -119,7 +119,7 @@ const hubData = [
     title: 'Your Hub Name',
     description: 'Your description',
     position: [x, y, z],
-    color: '#your-color',
+    colour: '#your-colour',
     stats: { participants: 100, successRate: 90, impact: 'Your impact' }
   }
 ]
@@ -185,7 +185,7 @@ npm run build
 
 1. **Add your images** to `src/assets/images/`
 2. **Add your videos** to `src/assets/videos/`
-3. **Customize colors** in the 3-D model
+3. **Customise colours** in the 3-D model
 4. **Update stats** with real data
 5. **Deploy** with CDN for global performance
 

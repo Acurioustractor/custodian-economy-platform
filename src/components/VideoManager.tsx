@@ -266,7 +266,7 @@ export const VideoManager: React.FC = () => {
           <div className="mt-4 p-4 bg-blue-100 rounded-lg">
             <div className="text-sm text-blue-800">
               <strong>💡 Adding New Videos:</strong> Edit the EMBEDDED_VIDEOS object in MediaIntegration.tsx. 
-              Include embed code, thumbnail, duration, location, and category for best organization.
+              Include embed code, thumbnail, duration, location, and category for best organisation.
             </div>
           </div>
         </div>

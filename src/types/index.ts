@@ -8,7 +8,7 @@ export interface Story {
   location: string;
 }
 
-export interface ColorPalette {
+export interface ColourPalette {
   primary: string;
   secondary: string;
   accent: string;
@@ -30,7 +30,7 @@ export interface ColorPalette {
 }
 
 export interface SectionProps {
-  colors: ColorPalette;
+  colours: ColourPalette;
 }
 
 export interface StoriesSectionProps extends SectionProps {
