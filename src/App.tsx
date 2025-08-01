@@ -24,7 +24,7 @@ function App() {
           <Route path="/impact" element={<CustodianEconomyImpact />} />
           <Route path="/photos" element={<PhotoPreviewPage />} />
           <Route path="/videos" element={<VideoManager />} />
-          <Route path="/brand-guide" element={<BrandGuidePage />} />
+          <Route path="/brand-strategy" element={<BrandGuidePage />} />
           <Route path="/contact" element={<ContactPage />} />
         </Routes>
       </div>

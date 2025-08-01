@@ -10,7 +10,7 @@ export const Navigation: React.FC = () => {
     { path: '/', label: 'Home', icon: Home },
     { path: '/model', label: 'The Model', icon: BarChart3 },
     { path: '/impact', label: 'Impact', icon: Users },
-    { path: '/brand-guide', label: 'Brand Guide', icon: Palette },
+    { path: '/brand-strategy', label: 'Brand Strategy', icon: Palette },
     { path: '/resources', label: 'Resources', icon: FileText },
   ];
 
