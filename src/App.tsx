@@ -7,6 +7,7 @@ import ResourceCenterPage from './pages/ImageGalleryPage';
 import CustodianEconomyImpact from './pages/CustodianEconomyImpact';
 import PhotoPreviewPage from './pages/PhotoPreviewPage';
 import ContactPage from './pages/ContactPage';
+import BrandGuidePage from './pages/BrandGuidePage';
 import { VideoManager } from './components/VideoManager';
 import './App.css';
 
@@ -23,6 +24,7 @@ function App() {
           <Route path="/impact" element={<CustodianEconomyImpact />} />
           <Route path="/photos" element={<PhotoPreviewPage />} />
           <Route path="/videos" element={<VideoManager />} />
+          <Route path="/brand-guide" element={<BrandGuidePage />} />
           <Route path="/contact" element={<ContactPage />} />
         </Routes>
       </div>

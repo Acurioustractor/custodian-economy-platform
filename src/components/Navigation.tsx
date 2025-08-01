@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Users, BarChart3, Home, FileText, Menu, X } from 'lucide-react';
+import { Users, BarChart3, Home, FileText, Menu, X, Palette } from 'lucide-react';
 
 export const Navigation: React.FC = () => {
   const location = useLocation();
@@ -10,6 +10,7 @@ export const Navigation: React.FC = () => {
     { path: '/', label: 'Home', icon: Home },
     { path: '/model', label: 'The Model', icon: BarChart3 },
     { path: '/impact', label: 'Impact', icon: Users },
+    { path: '/brand-guide', label: 'Brand Guide', icon: Palette },
     { path: '/resources', label: 'Resources', icon: FileText },
   ];
 
