@@ -82,13 +82,13 @@ export default {
         },
         // Primary brand colors
         'brand': {
-          primary: '#2c1810',
-          secondary: '#ff6b35',
-          accent: '#8b4513',
-          success: '#2d5016',
-          warning: '#b8860b',
+          primary: '#73582c', // Heritage Brown
+          secondary: '#d4af37', // Achievement Gold  
+          accent: '#0288d1', // Journey Blue
+          success: '#2e7d32', // Growth Green
+          warning: '#ed6c02', // Safety Orange
           danger: '#8b2500',
-          info: '#cd853f',
+          info: '#757575', // Professional Grey
         },
       },
       fontFamily: {

@@ -1,0 +1,51 @@
+{
+  "workshops": {
+    "tasks": [
+      {
+        "id": "1",
+        "title": "Plan workshop curriculum for custodial pathways training program",
+        "description": "Develop comprehensive curriculum covering key topics for custodial pathways training including mentoring, economy model, and skill development",
+        "status": "pending",
+        "priority": "high",
+        "dependencies": [],
+        "created": "2025-08-20T01:20:00.000Z",
+        "updated": "2025-08-20T01:20:00.000Z"
+      },
+      {
+        "id": "2",
+        "title": "Create workshop materials and resources",
+        "description": "Develop presentation materials, handouts, and interactive resources for workshop sessions",
+        "status": "pending",
+        "priority": "medium",
+        "dependencies": ["1"],
+        "created": "2025-08-20T01:20:00.000Z",
+        "updated": "2025-08-20T01:20:00.000Z"
+      },
+      {
+        "id": "3",
+        "title": "Schedule workshop sessions and venues",
+        "description": "Plan and book workshop sessions, coordinate venues, and manage participant registration",
+        "status": "pending",
+        "priority": "medium",
+        "dependencies": ["1"],
+        "created": "2025-08-20T01:20:00.000Z",
+        "updated": "2025-08-20T01:20:00.000Z"
+      },
+      {
+        "id": "4",
+        "title": "Develop participant feedback and evaluation system",
+        "description": "Create systems for collecting workshop feedback and tracking participant progress",
+        "status": "pending",
+        "priority": "low",
+        "dependencies": ["2"],
+        "created": "2025-08-20T01:20:00.000Z",
+        "updated": "2025-08-20T01:20:00.000Z"
+      }
+    ],
+    "metadata": {
+      "created": "2025-08-20T01:15:08.474Z",
+      "updated": "2025-08-20T01:20:00.000Z",
+      "description": "Workshop planning and management tasks"
+    }
+  }
+}

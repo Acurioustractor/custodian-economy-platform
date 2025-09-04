@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { ArrowRight, Users, Target, Building2, Palette, MessageSquare, Calendar, Play, Eye, Download } from 'lucide-react';
+import { ArrowRight, Users, Target, Building2, Palette, MessageSquare, Calendar, Play, Eye, Download, Database } from 'lucide-react';
 
 const BrandGuidePage: React.FC = () => {
   const [activeSection, setActiveSection] = useState('architecture');
@@ -439,6 +439,100 @@ const BrandGuidePage: React.FC = () => {
     </div>
   );
 
+  const EmpathyLedger = () => (
+    <div className="max-w-6xl mx-auto px-6 py-20">
+      <div className="text-center mb-16">
+        <h2 className="text-4xl font-light text-gray-900 mb-6">Empathy Ledger Integration</h2>
+        <p className="text-xl text-gray-600 font-light leading-relaxed max-w-3xl mx-auto">
+          Strategic content management powered by authentic stories and community insights
+        </p>
+      </div>
+
+      {/* Content System Overview */}
+      <div className="bg-gradient-to-r from-blue-50 to-green-50 rounded-2xl p-8 mb-12">
+        <div className="text-center mb-8">
+          <h3 className="text-3xl font-light text-gray-900 mb-4">AI-Powered Brand Storytelling</h3>
+          <p className="text-lg text-gray-600 font-light">Transform authentic community stories into strategic communication</p>
+        </div>
+
+        <div className="grid md:grid-cols-3 gap-6">
+          <div className="bg-white rounded-xl p-6 shadow-sm border border-gray-100">
+            <Database className="w-8 h-8 text-blue-600 mb-4" />
+            <h4 className="text-lg font-medium text-gray-900 mb-2">Story Collection</h4>
+            <p className="text-gray-600 font-light text-sm">Gather authentic stories, transcripts, and media from community conversations</p>
+          </div>
+          <div className="bg-white rounded-xl p-6 shadow-sm border border-gray-100">
+            <Users className="w-8 h-8 text-green-600 mb-4" />
+            <h4 className="text-lg font-medium text-gray-900 mb-2">Brand DNA Analysis</h4>
+            <p className="text-gray-600 font-light text-sm">AI-powered analysis extracts brand themes and messaging insights</p>
+          </div>
+          <div className="bg-white rounded-xl p-6 shadow-sm border border-gray-100">
+            <MessageSquare className="w-8 h-8 text-purple-600 mb-4" />
+            <h4 className="text-lg font-medium text-gray-900 mb-2">Content Generation</h4>
+            <p className="text-gray-600 font-light text-sm">Generate blog posts, prospectuses, and media content from authentic stories</p>
+          </div>
+        </div>
+      </div>
+
+      {/* Strategic Applications */}
+      <div className="grid md:grid-cols-2 gap-8">
+        <div className="bg-white rounded-xl p-8 shadow-sm border border-gray-100">
+          <h3 className="text-2xl font-light text-gray-900 mb-6">Content Management Hub</h3>
+          <div className="space-y-4">
+            <div className="flex items-start space-x-3">
+              <div className="w-2 h-2 bg-blue-400 rounded-full mt-2 flex-shrink-0"></div>
+              <div>
+                <h4 className="font-medium text-gray-900">Story Database</h4>
+                <p className="text-sm text-gray-600">Centralized repository for all community stories and insights</p>
+              </div>
+            </div>
+            <div className="flex items-start space-x-3">
+              <div className="w-2 h-2 bg-green-400 rounded-full mt-2 flex-shrink-0"></div>
+              <div>
+                <h4 className="font-medium text-gray-900">AI Analysis Engine</h4>
+                <p className="text-sm text-gray-600">Extract themes, emotions, and strategic insights from content</p>
+              </div>
+            </div>
+            <div className="flex items-start space-x-3">
+              <div className="w-2 h-2 bg-purple-400 rounded-full mt-2 flex-shrink-0"></div>
+              <div>
+                <h4 className="font-medium text-gray-900">Performance Analytics</h4>
+                <p className="text-sm text-gray-600">Track content impact and engagement metrics</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="bg-white rounded-xl p-8 shadow-sm border border-gray-100">
+          <h3 className="text-2xl font-light text-gray-900 mb-6">Strategic Applications</h3>
+          <div className="space-y-4">
+            <div className="flex items-start space-x-3">
+              <div className="w-2 h-2 bg-orange-400 rounded-full mt-2 flex-shrink-0"></div>
+              <div>
+                <h4 className="font-medium text-gray-900">Dynamic Blog System</h4>
+                <p className="text-sm text-gray-600">AI-generated blog posts from story content with multiple formats</p>
+              </div>
+            </div>
+            <div className="flex items-start space-x-3">
+              <div className="w-2 h-2 bg-yellow-400 rounded-full mt-2 flex-shrink-0"></div>
+              <div>
+                <h4 className="font-medium text-gray-900">Prospectus Generator</h4>
+                <p className="text-sm text-gray-600">Audience-specific documents for investors, partners, and government</p>
+              </div>
+            </div>
+            <div className="flex items-start space-x-3">
+              <div className="w-2 h-2 bg-red-400 rounded-full mt-2 flex-shrink-0"></div>
+              <div>
+                <h4 className="font-medium text-gray-900">Media Library</h4>
+                <p className="text-sm text-gray-600">Smart categorization and tagging for visual content</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
@@ -502,6 +596,7 @@ const BrandGuidePage: React.FC = () => {
                 { id: 'architecture', label: 'Brand Architecture', icon: Building2 },
                 { id: 'visual', label: 'Visual Identity', icon: Palette },
                 { id: 'campaigns', label: 'Campaign Concepts', icon: MessageSquare },
+                { id: 'empathy-ledger', label: 'Empathy Ledger', icon: Users },
                 { id: 'timeline', label: 'Implementation', icon: Calendar }
               ].map((section) => {
                 const Icon = section.icon;
@@ -539,7 +634,11 @@ const BrandGuidePage: React.FC = () => {
           <CampaignConcepts />
         </section>
 
-        <section id="section-timeline" className="bg-gray-50">
+        <section id="section-empathy-ledger" className="bg-gray-50">
+          <EmpathyLedger />
+        </section>
+
+        <section id="section-timeline">
           <ImplementationTimeline />
         </section>
       </div>

@@ -34,20 +34,20 @@ export const HomePage: React.FC = () => {
                 </p>
                 
                 {/* Key Stats - Enhanced */}
-                <div className="flex justify-center items-center gap-8 mb-12 text-center">
-                  <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-lg p-4">
-                    <div className="text-3xl font-light text-white drop-shadow-md">85%</div>
-                    <div className="text-sm text-gray-200">retention rate</div>
+                <div className="flex flex-col sm:flex-row justify-center items-center gap-4 sm:gap-8 mb-12 text-center">
+                  <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-lg p-4 min-w-[120px]">
+                    <div className="text-2xl sm:text-3xl font-light text-white drop-shadow-md">85%</div>
+                    <div className="text-xs sm:text-sm text-gray-200">retention rate</div>
                   </div>
-                  <div className="w-px h-12 bg-white bg-opacity-30"></div>
-                  <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-lg p-4">
-                    <div className="text-3xl font-light text-white drop-shadow-md">$1.1M</div>
-                    <div className="text-sm text-gray-200">saved annually</div>
+                  <div className="hidden sm:block w-px h-12 bg-white bg-opacity-30"></div>
+                  <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-lg p-4 min-w-[120px]">
+                    <div className="text-2xl sm:text-3xl font-light text-white drop-shadow-md">$1.1M</div>
+                    <div className="text-xs sm:text-sm text-gray-200">saved annually</div>
                   </div>
-                  <div className="w-px h-12 bg-white bg-opacity-30"></div>
-                  <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-lg p-4">
-                    <div className="text-3xl font-light text-white drop-shadow-md">400+</div>
-                    <div className="text-sm text-gray-200">lives transformed</div>
+                  <div className="hidden sm:block w-px h-12 bg-white bg-opacity-30"></div>
+                  <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-lg p-4 min-w-[120px]">
+                    <div className="text-2xl sm:text-3xl font-light text-white drop-shadow-md">400+</div>
+                    <div className="text-xs sm:text-sm text-gray-200">lives transformed</div>
                   </div>
                 </div>
                 

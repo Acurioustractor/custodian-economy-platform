@@ -130,6 +130,9 @@ const ContactPage: React.FC = () => {
                     <option value="employment">Employment Partnerships</option>
                     <option value="investment">Investment Opportunities</option>
                     <option value="implementation">Implementing the Model</option>
+                    <option value="content-strategy">Content & Communication Strategy</option>
+                    <option value="brand-storytelling">Brand Storytelling & Media</option>
+                    <option value="empathy-ledger">Empathy Ledger Integration</option>
                     <option value="media">Media & Speaking</option>
                   </select>
                 </div>
@@ -167,8 +170,8 @@ const ContactPage: React.FC = () => {
               <div className="space-y-8">
                 <p className="text-lg text-gray-600 font-light leading-relaxed">
                   Whether you're an employer looking for dedicated workers, an investor interested in 
-                  proven social impact, or a community leader wanting to implement the model locally, 
-                  we're here to help.
+                  proven social impact, a community leader wanting to implement the model locally, or 
+                  interested in our empathy ledger approach to strategic communication, we're here to help.
                 </p>
 
                 {/* Contact Methods */}
@@ -230,6 +233,13 @@ const ContactPage: React.FC = () => {
                       <div>
                         <h4 className="font-medium text-gray-900">For Communities</h4>
                         <p className="text-sm text-gray-600">Implement the three-hub model in your local area with our guidance</p>
+                      </div>
+                    </div>
+                    <div className="flex items-start space-x-3">
+                      <div className="w-2 h-2 bg-gray-400 rounded-full mt-2 flex-shrink-0"></div>
+                      <div>
+                        <h4 className="font-medium text-gray-900">For Strategic Communication</h4>
+                        <p className="text-sm text-gray-600">Leverage our empathy ledger system for authentic brand storytelling and impact measurement</p>
                       </div>
                     </div>
                   </div>

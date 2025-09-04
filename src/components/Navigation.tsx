@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Users, BarChart3, Home, FileText, Menu, X, Palette } from 'lucide-react';
+import { Users, BarChart3, Home, FileText, Menu, X, Palette, Database, TrendingUp, Beaker, Settings } from 'lucide-react';
 
 export const Navigation: React.FC = () => {
   const location = useLocation();
@@ -10,14 +10,14 @@ export const Navigation: React.FC = () => {
     { path: '/', label: 'Home', icon: Home },
     { path: '/model', label: 'The Model', icon: BarChart3 },
     { path: '/impact', label: 'Impact', icon: Users },
-    { path: '/brand-strategy', label: 'Brand Strategy', icon: Palette },
+    { path: '/brand-strategy', label: 'Brand Guide', icon: Palette },
     { path: '/resources', label: 'Resources', icon: FileText },
   ];
 
   return (
-    <nav className="bg-white border-b border-gray-100 sticky top-0 z-40 backdrop-blur-md bg-white/90">
-      <div className="max-w-7xl mx-auto px-6">
-        <div className="flex justify-between items-center h-20">
+    <nav className="bg-white/95 border-b border-gray-100 sticky top-0 z-40 backdrop-blur-md">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6">
+        <div className="flex justify-between items-center h-16 sm:h-20">
           
           {/* Logo */}
           <div className="flex items-center">
@@ -28,7 +28,7 @@ export const Navigation: React.FC = () => {
           
           {/* Desktop Navigation - Centered */}
           <div className="hidden md:flex flex-1 justify-center">
-            <div className="flex items-center space-x-12">
+            <div className="flex items-center space-x-8 lg:space-x-12">
               {navItems.map((item) => {
                 const isActive = location.pathname === item.path;
                 

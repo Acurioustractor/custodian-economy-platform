@@ -103,3 +103,14 @@ screenshot.png
 *.png.tmp
 custodian-economy-platform@1.0.0
 vite
+
+logs
+*.log
+dev-debug.log
+# Dependency directories
+.vscode
+# OS specific
+
+# Task files
+# tasks.json
+# tasks/ 

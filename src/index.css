@@ -4,13 +4,13 @@
 
 @layer base {
   :root {
-    --brand-primary: #2c1810;
-    --brand-secondary: #ff6b35;
-    --brand-accent: #8b4513;
-    --brand-success: #2d5016;
-    --brand-warning: #b8860b;
+    --brand-primary: #73582c; /* Heritage Brown */
+    --brand-secondary: #d4af37; /* Achievement Gold */
+    --brand-accent: #0288d1; /* Journey Blue */
+    --brand-success: #2e7d32; /* Growth Green */
+    --brand-warning: #ed6c02; /* Safety Orange */
     --brand-danger: #8b2500;
-    --brand-info: #cd853f;
+    --brand-info: #757575; /* Professional Grey */
   }
 
   * {
@@ -29,8 +29,8 @@
       sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    background-color: var(--brand-primary);
-    color: #f5f5dc;
+    background-color: #ffffff;
+    color: #111827;
   }
 
   code {

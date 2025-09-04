@@ -23,7 +23,7 @@ const hubData: HubData[] = [
     title: 'Community Hub',
     description: 'Building trust & cultural connection',
     position: [-4, 0, 0],
-    color: '#FF6B35',
+    color: '#d4af37', // Achievement Gold
     connections: ['pathways', 'business'],
     stats: { participants: 400, successRate: 85, impact: '400+ young people transformed' }
   },
@@ -32,7 +32,7 @@ const hubData: HubData[] = [
     title: 'Pathways Hub',
     description: 'Training & certification',
     position: [0, 2, 0],
-    color: '#556B2F',
+    color: '#2e7d32', // Growth Green
     connections: ['community', 'business'],
     stats: { participants: 350, successRate: 92, impact: '92% completion rate' }
   },
@@ -41,7 +41,7 @@ const hubData: HubData[] = [
     title: 'Business Hub',
     description: 'Meaningful employment',
     position: [4, 0, 0],
-    color: '#8B4513',
+    color: '#73582c', // Heritage Brown
     connections: ['community', 'pathways'],
     stats: { participants: 300, successRate: 85, impact: '$1.1M annual savings' }
   }
@@ -115,8 +115,8 @@ function ConnectionLine({ from, to, active }: { from: [number, number, number], 
         rotation={[0, 0, Math.atan2(to[1] - from[1], to[0] - from[0])]}
       >
         <meshStandardMaterial 
-          color={active ? "#FF6B35" : "#666666"} 
-          emissive={active ? "#FF6B35" : "#333333"}
+          color={active ? "#d4af37" : "#666666"} 
+          emissive={active ? "#d4af37" : "#333333"}
           emissiveIntensity={active ? 0.2 : 0.05}
         />
       </Cylinder>
@@ -161,7 +161,7 @@ function Scene({ activeHub, setActiveHub }: { activeHub: string | null, setActiv
       {/* Ground plane */}
       <mesh rotation={[-Math.PI / 2, 0, 0]} position={[0, -3, 0]}>
         <planeGeometry args={[20, 20]} />
-        <meshStandardMaterial color="#1a1a1a" transparent opacity={0.3} />
+        <meshStandardMaterial color="#73582c" transparent opacity={0.3} />
       </mesh>
 
       {/* Floating particles */}
@@ -171,7 +171,7 @@ function Scene({ activeHub, setActiveHub }: { activeHub: string | null, setActiv
           Math.random() * 5,
           (Math.random() - 0.5) * 20
         ]}>
-          <meshStandardMaterial color="#FF6B35" transparent opacity={0.6} />
+          <meshStandardMaterial color="#d4af37" transparent opacity={0.6} />
         </Sphere>
       ))}
     </>

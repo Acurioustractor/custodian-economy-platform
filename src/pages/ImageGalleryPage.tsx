@@ -75,6 +75,22 @@ const ResourceCenterPage: React.FC = () => {
         category: 'research'
       },
       {
+        title: 'Empathy Ledger System Guide',
+        description: 'Comprehensive guide to implementing the empathy ledger for content management',
+        type: 'Implementation Guide',
+        size: '2.1 MB',
+        downloadUrl: '#',
+        category: 'guides'
+      },
+      {
+        title: 'Brand DNA Analysis Framework',
+        description: 'Research methodology for extracting authentic brand themes from community stories',
+        type: 'Research Framework',
+        size: '1.3 MB',
+        downloadUrl: '#',
+        category: 'research'
+      },
+      {
         title: 'Cultural Healing and Employment',
         description: 'Research on the connection between cultural identity and job success',
         type: 'Cultural Study',
