@@ -105,7 +105,7 @@ class SearchService {
       }
 
       // Sanitize search query
-      const sanitizedQuery = validationService.sanitizeInput(options.query || '');
+      const sanitizedQuery = validationService.sanitizeString(options.query || '');
 
       // Add to search history
       if (sanitizedQuery) {
@@ -132,7 +132,7 @@ class SearchService {
       };
 
     } catch (error) {
-      throw errorHandlingService.handleError(error, { operation: 'search', options });
+      throw errorHandlingService.handleError(error as Error, { operation: 'search', options });
     }
   }
 
@@ -365,7 +365,7 @@ class SearchService {
   /**
    * Search stories
    */
-  private async searchStories(query: string, options: SearchOptions): Promise<SearchResult[]> {
+  private async searchStories(query: string, _options: SearchOptions): Promise<SearchResult[]> {
     try {
       const response = await apiService.getContent({ type: 'story' });
       if (!response.success || !response.data) return [];
@@ -403,7 +403,7 @@ class SearchService {
   /**
    * Search media items
    */
-  private async searchMedia(query: string, options: SearchOptions): Promise<SearchResult[]> {
+  private async searchMedia(query: string, _options: SearchOptions): Promise<SearchResult[]> {
     try {
       const response = await apiService.getMedia();
       if (!response.success || !response.data) return [];
@@ -417,8 +417,8 @@ class SearchService {
           results.push({
             id: item.id,
             type: 'media',
-            title: item.title || item.filename,
-            summary: item.description,
+            title: item.name || item.filename || 'Untitled',
+            summary: item.alt_text || item.description || '',
             score,
             metadata: {
               author: item.uploadedBy,
@@ -439,7 +439,7 @@ class SearchService {
   /**
    * Search brand analyses
    */
-  private async searchAnalyses(query: string, options: SearchOptions): Promise<SearchResult[]> {
+  private async searchAnalyses(_query: string, _options: SearchOptions): Promise<SearchResult[]> {
     // Mock implementation - in production, would fetch from brand analysis service
     return [];
   }
@@ -447,7 +447,7 @@ class SearchService {
   /**
    * Search brand tests
    */
-  private async searchTests(query: string, options: SearchOptions): Promise<SearchResult[]> {
+  private async searchTests(query: string, _options: SearchOptions): Promise<SearchResult[]> {
     try {
       const response = await apiService.getBrandTests();
       if (!response.success || !response.data) return [];
@@ -483,7 +483,7 @@ class SearchService {
   /**
    * Search activities
    */
-  private async searchActivities(query: string, options: SearchOptions): Promise<SearchResult[]> {
+  private async searchActivities(query: string, _options: SearchOptions): Promise<SearchResult[]> {
     try {
       const response = await apiService.getActivities();
       if (!response.success || !response.data) return [];

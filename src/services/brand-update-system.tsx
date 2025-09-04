@@ -318,7 +318,7 @@ export const BrandUpdateProvider: React.FC<{ children: React.ReactNode }> = ({ c
         : e
     ));
 
-    return testVariant.id;
+    // Return void as specified in function signature
   };
 
   const rollbackUpdate = async (updateId: string) => {

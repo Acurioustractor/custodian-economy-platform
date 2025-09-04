@@ -204,7 +204,7 @@ class BrandTestingFramework {
 
     // Create comparison matrix
     const comparisonMatrix: { [key: string]: { [metric: string]: number } } = {};
-    const metrics = Object.keys(results[0].metrics);
+    // Metrics keys available: Object.keys(results[0].metrics);
 
     results.forEach(result => {
       comparisonMatrix[result.variant_id] = result.metrics;
@@ -312,7 +312,7 @@ class BrandTestingFramework {
   private async collectTestPeriodData(
     startDate: Date, 
     endDate: Date, 
-    audiences: string[]
+_audiences: string[]
   ): Promise<Story[]> {
     try {
       const response = await empathyLedgerAPI.getStories({
@@ -325,7 +325,7 @@ class BrandTestingFramework {
     }
   }
 
-  private async analyzeBrandAlignment(data: Story[], variant: BrandTestVariant) {
+  private async analyzeBrandAlignment(data: Story[], _variant: BrandTestVariant) {
     const analyses = await Promise.all(
       data.map(story => brandDNAAnalyzer.analyzeStory(story))
     );
@@ -342,7 +342,7 @@ class BrandTestingFramework {
     };
   }
 
-  private async analyzeAudienceEngagement(data: Story[], variant: BrandTestVariant) {
+  private async analyzeAudienceEngagement(_data: Story[], variant: BrandTestVariant) {
     // Simulate audience engagement analysis
     const audienceResponses = variant.target_audiences.map(audience => ({
       audience,
@@ -360,7 +360,7 @@ class BrandTestingFramework {
     };
   }
 
-  private async analyzeContentPerformance(data: Story[], variant: BrandTestVariant) {
+  private async analyzeContentPerformance(data: Story[], _variant: BrandTestVariant) {
     const analyses = await Promise.all(
       data.map(story => brandDNAAnalyzer.analyzeStory(story))
     );
@@ -462,33 +462,13 @@ class BrandTestingFramework {
     // Generate test stories with different messaging
     const allMessages = [original, ...variants];
     return allMessages.map((message, index) => ({
-      id: `test_story_${index}_${Date.now()}`,
-      participant_name: `Test Participant ${index + 1}`,
-      participant_id: `test_${index}`,
-      title: context === 'headline' ? message : `Test Story ${index + 1}`,
-      content: `Test content incorporating ${context}: ${message}`,
-      summary: `Testing ${context} variation`,
-      author: 'Brand Testing Framework',
-      creation_date: new Date(),
-      date_recorded: new Date(),
-      interviewer: 'Brand Testing System',
-      story_type: 'test' as any,
-      tags: [`test_${context}`, 'brand_testing'],
-      empathy_ledger_entry_id: '',
-      location: '',
-      region: '',
-      community: '',
-      duration_minutes: 5,
-      participant_demographics: {},
-      emotional_journey: [],
-      themes_identified: [],
-      cultural_significance: '',
-      language_used: 'en',
-      dialect_notes: '',
-      translation_notes: '',
-      verification_status: 'unverified' as any,
-      verified: false,
-      publication_status: 'draft' as any
+      name: `Test Participant ${index + 1}`,
+      photo: '/placeholder.jpg',
+      before: `Before: Testing ${context}`,
+      after: `After: ${context === 'headline' ? message : `Test Story ${index + 1}`}`,
+      quote: `Test content incorporating ${context}: ${message}`,
+      videos: [],
+      location: 'Test Location'
     }));
   }
 
@@ -496,7 +476,7 @@ class BrandTestingFramework {
     // Calculate score based on brand DNA alignment and audience relevance
     const baseScore = analysis.brand_dna_score.overall_score;
     const audienceBonus = analysis.communication_insights
-      .filter(insight => insight.content_type === 'story')
+      .filter(insight => insight.insight_type === 'opportunity')
       .reduce((sum, _insight) => sum + 5, 0); // Simplified scoring
     
     return baseScore + audienceBonus;
@@ -512,7 +492,7 @@ class BrandTestingFramework {
     
     if (bestAnalysis) {
       insights.push(`Highest scoring message demonstrates strong ${bestAnalysis.brand_dna_score.authenticity > 80 ? 'authenticity' : 'brand alignment'}`);
-      insights.push(...bestAnalysis.strategic_recommendations.map(rec => rec.recommendation_text || 'Optimize messaging alignment'));
+      insights.push(...bestAnalysis.strategic_recommendations.map(rec => rec.recommendation || 'Optimize messaging alignment'));
     }
 
     return insights;

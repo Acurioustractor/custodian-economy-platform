@@ -40,7 +40,7 @@ class EmailNotificationService {
     }
   }
 
-  async notifyBrandTestComplete(testId: string, results: any): Promise<boolean> {
+  async notifyBrandTestComplete(testId: string, _results: any): Promise<boolean> {
     try {
       console.log('Brand test completion notification would be sent:', testId);
       return true;
@@ -50,7 +50,7 @@ class EmailNotificationService {
     }
   }
 
-  async notifyCampaignLaunch(campaignId: string, details: any): Promise<boolean> {
+  async notifyCampaignLaunch(campaignId: string, _details: any): Promise<boolean> {
     try {
       console.log('Campaign launch notification would be sent:', campaignId);
       return true;
